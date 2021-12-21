@@ -1,5 +1,6 @@
 package com.example.smartgym.view
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -41,6 +42,7 @@ class ExerciseRegisterFragment : Fragment() {
         return view
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -64,6 +66,7 @@ class ExerciseRegisterFragment : Fragment() {
         transaction?.replace(R.id.exerciseRegisterFragment, ExerciseFragment())
         transaction?.disallowAddToBackStack()
         transaction?.commit()
+        titleRegisterExercise.visibility = View.GONE
         textDescription.visibility = View.GONE
         textName.visibility = View.GONE
         buttonAdd.visibility = View.GONE
@@ -75,6 +78,7 @@ class ExerciseRegisterFragment : Fragment() {
         transaction?.replace(R.id.exerciseRegisterFragment, WorkoutFragment())
         transaction?.disallowAddToBackStack()
         transaction?.commit()
+        titleRegisterExercise.visibility = View.GONE
         textDescription.visibility = View.GONE
         textName.visibility = View.GONE
         buttonAdd.visibility = View.GONE

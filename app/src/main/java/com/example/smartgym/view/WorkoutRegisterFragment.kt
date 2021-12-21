@@ -73,6 +73,7 @@ class WorkoutRegisterFragment : Fragment() {
         transaction?.replace(R.id.workoutRegisterFragment, WorkoutFragment())
         transaction?.disallowAddToBackStack()
         transaction?.commit()
+        titleRegisterWorkout.visibility = View.GONE
         textNameWorkoutRegister.visibility = View.GONE
         textDescriptionWorkotRegister.visibility = View.GONE
         buttonAddWorkout.visibility = View.GONE
@@ -84,6 +85,7 @@ class WorkoutRegisterFragment : Fragment() {
         transaction?.replace(R.id.workoutRegisterFragment, ExerciseFragment())
         transaction?.disallowAddToBackStack()
         transaction?.commit()
+        titleRegisterWorkout.visibility = View.GONE
         textNameWorkoutRegister.visibility = View.GONE
         textDescriptionWorkotRegister.visibility = View.GONE
         buttonAddWorkout.visibility = View.GONE
@@ -93,6 +95,7 @@ class WorkoutRegisterFragment : Fragment() {
     private fun startMain(){
         val i = Intent(context, MainActivity::class.java)
         startActivity(i)
+        titleRegisterWorkout.visibility = View.GONE
         textNameWorkoutRegister.visibility = View.GONE
         textDescriptionWorkotRegister.visibility = View.GONE
         buttonAddWorkout.visibility = View.GONE
