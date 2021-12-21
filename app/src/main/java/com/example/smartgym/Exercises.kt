@@ -1,6 +1,11 @@
 package com.example.smartgym
 
-class Exercises {
-    val Name: String = ""
-    val Description: String = ""
-}
+import com.google.firebase.firestore.DocumentId
+
+class Exercises (
+    val name: String = "",
+    val description: String = "",
+    @DocumentId
+    var id: String? = null
+        )
+

@@ -4,15 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class ExercisesListAdapter(var postListItems: List<Exercises>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class DescViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(exercises: Exercises){
             val name = itemView.findViewById<TextView>(R.id.textName)
-            name.text = exercises.Name
-            itemView.findViewById<TextView>(R.id.textDescription).text = exercises.Description
+            name.text = exercises.name
+            itemView.findViewById<TextView>(R.id.textDescription).text = exercises.description
         }
     }
 

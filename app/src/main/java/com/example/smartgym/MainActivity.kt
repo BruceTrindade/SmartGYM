@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful){
                     buttonExercises.setOnClickListener{
                         callExerciseFragment()
+                        bottomBar.visibility = View.GONE
                     }
                     buttonHome.setOnClickListener {
                         startMain()
