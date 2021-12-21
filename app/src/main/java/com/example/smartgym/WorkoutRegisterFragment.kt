@@ -1,17 +1,20 @@
 package com.example.smartgym
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.smartgym.view.ExerciseFragment
 import com.example.smartgym.viewModel.ExerciseRegisterViewModel
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.exercise_register_fragment.*
+import kotlinx.android.synthetic.main.workout_fragment.*
 import kotlinx.android.synthetic.main.workout_register_fragment.*
 
 class WorkoutRegisterFragment : Fragment() {
@@ -53,6 +56,18 @@ class WorkoutRegisterFragment : Fragment() {
             viewModel.addWorkout(name, description)
         }
 
+        view.findViewById<ImageButton>(R.id.buttonWorkout).setOnClickListener{
+            startWorkout()
+        }
+
+        view.findViewById<ImageButton>(R.id.buttonHome).setOnClickListener{
+            startMain()
+        }
+
+        view.findViewById<ImageButton>(R.id.buttonExercises).setOnClickListener{
+            startExercise()
+        }
+
     }
 
     private fun startWorkout(){
@@ -64,6 +79,25 @@ class WorkoutRegisterFragment : Fragment() {
         textDescriptionWorkotRegister.visibility = View.GONE
         buttonAddWorkout.visibility = View.GONE
 
+    }
+
+    private fun startExercise(){
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.workoutRegisterFragment, ExerciseFragment())
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
+        textNameWorkoutRegister.visibility = View.GONE
+        textDescriptionWorkotRegister.visibility = View.GONE
+        buttonAddWorkout.visibility = View.GONE
+
+    }
+
+    private fun startMain(){
+        val i = Intent(context, MainActivity::class.java)
+        startActivity(i)
+        textNameWorkoutRegister.visibility = View.GONE
+        textDescriptionWorkotRegister.visibility = View.GONE
+        buttonAddWorkout.visibility = View.GONE
     }
 
 }

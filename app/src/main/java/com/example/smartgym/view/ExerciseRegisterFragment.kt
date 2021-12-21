@@ -10,6 +10,7 @@ import android.widget.EditText
 import com.example.smartgym.viewModel.ExerciseRegisterViewModel
 import com.example.smartgym.R
 import com.example.smartgym.R.*
+import com.example.smartgym.WorkoutFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.exercise_register_fragment.*
 
@@ -56,6 +57,16 @@ class ExerciseRegisterFragment : Fragment() {
             viewModel.addExercises(name, description)
         }
 
+        buttonWorkout.setOnClickListener {
+            startWorkout()
+        }
+
+        buttonExercises.setOnClickListener {
+            startExercise()
+        }
+
+
+
     }
 
     private fun startExercise(){
@@ -68,5 +79,16 @@ class ExerciseRegisterFragment : Fragment() {
         buttonAdd.visibility = View.GONE
 
     }
+
+    private fun startWorkout(){
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.exerciseRegisterFragment, WorkoutFragment())
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
+        textDescription.visibility = View.GONE
+        textName.visibility = View.GONE
+        buttonAdd.visibility = View.GONE
+    }
+
 
 }

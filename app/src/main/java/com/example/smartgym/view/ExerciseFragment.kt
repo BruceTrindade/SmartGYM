@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.smartgym.viewModel.ExerciseViewModel
 import com.example.smartgym.MainActivity
 import com.example.smartgym.R
+import com.example.smartgym.WorkoutFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.exercise_fragment.*
+import kotlinx.android.synthetic.main.exercise_register_fragment.*
 
 class ExerciseFragment : Fragment() {
 
@@ -33,6 +35,10 @@ class ExerciseFragment : Fragment() {
 
         view.findViewById<ImageButton>(R.id.buttonHome).setOnClickListener {
             startMain()
+        }
+
+        view.findViewById<ImageButton>(R.id.buttonWorkout).setOnClickListener {
+            startWorkout()
         }
 
         view.findViewById<FloatingActionButton>(R.id.buttonRegister).setOnClickListener{
@@ -58,5 +64,16 @@ class ExerciseFragment : Fragment() {
         transaction?.commit()
         recylerViewList.visibility = View.GONE
     }
+
+    private fun startWorkout(){
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.exerciseFragment, WorkoutFragment())
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
+        recylerViewList.visibility = View.GONE
+        buttonRegister.visibility = View.GONE
+
+    }
+
 
 }
