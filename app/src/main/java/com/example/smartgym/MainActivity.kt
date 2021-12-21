@@ -1,13 +1,12 @@
 package com.example.smartgym
 
 import android.content.ContentValues.TAG
-import android.nfc.Tag
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.tabs.TabLayout
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 private const val TAG: String = "HOMEPAGE_LOG"
 
@@ -26,32 +25,37 @@ class MainActivity : AppCompatActivity() {
         if (firebaseRepo.getUser() == null){
             firebaseRepo.createUser().addOnCompleteListener {
                 if (it.isSuccessful){
-                    loadPostData()
+                    buttonExercises.setOnClickListener{
+                        callExerciseFragment()
+                    }
+                    buttonHome.setOnClickListener {
+                        startMain()
+                    }
                 } else {
                     Log.d(TAG, "Error: ${it.exception!!.message}")
                 }
             }
         } else {
-            loadPostData()
+            buttonExercises.setOnClickListener{
+                callExerciseFragment()
+            }
         }
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recylerViewList)
-
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = postListAdapter
 
     }
 
-    private fun loadPostData() {
-        firebaseRepo.getPostList().addOnCompleteListener {
-            if (it.isSuccessful){
-                postList = it.result!!.toObjects(Exercises::class.java)
-                postListAdapter.postListItems = postList
-                postListAdapter.notifyDataSetChanged()
-            } else {
-                Log.d(TAG, "Error: ${it.exception!!.message}")
-            }
-        }
+    private fun startMain(){
+        val i = Intent(this, MainActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun callExerciseFragment(){
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.layoutMain, ExerciseFragment())
+            .commit()
+//        buttonExercises.visibility = View.GONE
+//        buttonWorkout.visibility = View.GONE
 
     }
 }

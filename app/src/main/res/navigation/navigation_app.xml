@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app"
+    app:startDestination="@id/exerciseFragment">
+
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.smartgym.ExerciseFragment"
+        android:label="exercise_fragment"
+        tools:layout="@layout/exercise_fragment" />
+
+
+    <fragment
+        android:id="@+id/exerciseRegisterFragment"
+        android:name="com.example.smartgym.ExerciseRegisterFragment"
+        android:label="exercise_register_fragment"
+        tools:layout="@layout/exercise_register_fragment" />
+</navigation>
