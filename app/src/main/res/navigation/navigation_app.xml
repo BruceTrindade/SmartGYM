@@ -18,12 +18,12 @@
         tools:layout="@layout/exercise_register_fragment" />
     <fragment
         android:id="@+id/workoutFragment"
-        android:name="com.example.smartgym.WorkoutFragment"
+        android:name="com.example.smartgym.view.WorkoutFragment"
         android:label="workout_fragment"
         tools:layout="@layout/workout_fragment" />
     <fragment
         android:id="@+id/workoutRegisterFragment"
-        android:name="com.example.smartgym.WorkoutRegisterFragment"
+        android:name="com.example.smartgym.view.WorkoutRegisterFragment"
         android:label="workout_register_fragment"
         tools:layout="@layout/workout_register_fragment" />
 </navigation>

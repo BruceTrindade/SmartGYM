@@ -1,4 +1,4 @@
-package com.example.smartgym
+package com.example.smartgym.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

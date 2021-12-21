@@ -5,7 +5,7 @@
     android:id="@+id/workoutRegisterFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WorkoutRegisterFragment">
+    tools:context=".view.WorkoutRegisterFragment">
 
     <EditText
         android:id="@+id/textDescriptionWorkotRegister"
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@drawable/row_exercise_background"
-        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:backgroundTint="@color/white"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginRight="15dp"
             android:background="@drawable/ic_home"
-            android:text="Exercícios" />
+            android:backgroundTint="#daa520" />
 
         <ImageButton
             android:id="@+id/buttonWorkout"
@@ -67,7 +67,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_workout"
-            android:text="Treinos" />
+            android:backgroundTint="#00008b"/>
 
         <ImageButton
             android:id="@+id/buttonExercises"
@@ -76,7 +76,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp"
             android:background="@drawable/ic_exercise"
-            android:text="Exercícios" />
+            android:backgroundTint="#daa520"/>
 
 
     </LinearLayout>

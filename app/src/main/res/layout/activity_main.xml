@@ -5,7 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/browser_actions_bg_grey"
     android:id="@+id/layoutMain">
+
+    <LinearLayout
+        android:id="@+id/containerDicas"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/phrases_home_background"
+        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/containerPhrases"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="Dica do dia:"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:text="Beba água e descanse entre os exercícios"
+            android:textAlignment="center"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/containerPhrases"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:background="@drawable/phrases_home_background"
+        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="Frase do dia:"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="Disciplina é fazer o que precisa ser feito, mesmo quando você não quer fazer."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomBar"
@@ -14,7 +91,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:background="@drawable/row_exercise_background"
-        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -25,7 +102,7 @@
             android:layout_marginRight="15dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_home"
-            android:text="Exercícios" />
+            android:backgroundTint="#daa520"/>
 
         <ImageButton
             android:id="@+id/buttonWorkout"
@@ -33,7 +110,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_workout"
-            android:text="Treinos" />
+            android:backgroundTint="#00008b" />
 
         <ImageButton
             android:id="@+id/buttonExercises"
@@ -42,7 +119,7 @@
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/ic_exercise"
-            android:text="Exercícios" />
+            android:backgroundTint="#daa520" />
 
 
     </LinearLayout>

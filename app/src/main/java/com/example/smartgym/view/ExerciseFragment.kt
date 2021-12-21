@@ -13,10 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.smartgym.viewModel.ExerciseViewModel
 import com.example.smartgym.MainActivity
 import com.example.smartgym.R
-import com.example.smartgym.WorkoutFragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.exercise_fragment.*
-import kotlinx.android.synthetic.main.exercise_register_fragment.*
 
 class ExerciseFragment : Fragment() {
 

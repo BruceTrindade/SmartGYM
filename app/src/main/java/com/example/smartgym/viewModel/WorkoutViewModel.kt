@@ -1,9 +1,8 @@
-package com.example.smartgym
+package com.example.smartgym.viewModel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.smartgym.adapter.ExercisesListAdapter
-import com.example.smartgym.repository.Exercises
+import com.example.smartgym.adapter.WorkoutListAdapter
 import com.example.smartgym.repository.FirebaseRepo
 import com.example.smartgym.repository.Workout
 

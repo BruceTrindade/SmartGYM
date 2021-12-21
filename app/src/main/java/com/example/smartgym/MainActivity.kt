@@ -6,11 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.smartgym.R
-import com.example.smartgym.adapter.ExercisesListAdapter
 import com.example.smartgym.repository.Exercises
 import com.example.smartgym.repository.FirebaseRepo
 import com.example.smartgym.view.ExerciseFragment
+import com.example.smartgym.view.WorkoutFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -61,6 +60,8 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.layoutMain, ExerciseFragment())
             .commit()
+        containerPhrases.visibility = View.GONE
+        containerDicas.visibility = View.GONE
 
     }
     private fun callWorkoutFragment(){
@@ -68,6 +69,7 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.layoutMain, WorkoutFragment())
             .commit()
-
+        containerPhrases.visibility = View.GONE
+        containerDicas.visibility = View.GONE
     }
 }

@@ -10,7 +10,6 @@ import android.widget.EditText
 import com.example.smartgym.viewModel.ExerciseRegisterViewModel
 import com.example.smartgym.R
 import com.example.smartgym.R.*
-import com.example.smartgym.WorkoutFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.exercise_register_fragment.*
 

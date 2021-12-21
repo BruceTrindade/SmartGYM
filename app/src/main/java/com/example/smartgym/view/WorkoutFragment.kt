@@ -1,4 +1,4 @@
-package com.example.smartgym
+package com.example.smartgym.view
 
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
@@ -10,11 +10,10 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.smartgym.view.ExerciseFragment
-import com.example.smartgym.view.ExerciseRegisterFragment
+import com.example.smartgym.MainActivity
+import com.example.smartgym.R
+import com.example.smartgym.viewModel.WorkoutViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.exercise_fragment.*
-import kotlinx.android.synthetic.main.exercise_fragment.recylerViewList
 import kotlinx.android.synthetic.main.workout_fragment.*
 
 class WorkoutFragment : Fragment() {
