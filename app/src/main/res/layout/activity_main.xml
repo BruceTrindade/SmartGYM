@@ -8,6 +8,14 @@
     android:background="@color/browser_actions_bg_grey"
     android:id="@+id/layoutMain">
 
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragmentContainerView2"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:navGraph="@navigation/navigation_app" />-->
+
     <LinearLayout
         android:id="@+id/containerDicas"
         android:layout_width="300dp"

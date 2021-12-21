@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_app"
-    app:startDestination="@id/exerciseFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/exerciseFragment"
@@ -26,4 +26,9 @@
         android:name="com.example.smartgym.view.WorkoutRegisterFragment"
         android:label="workout_register_fragment"
         tools:layout="@layout/workout_register_fragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.smartgym.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
 </navigation>
