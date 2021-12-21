@@ -13,14 +13,13 @@ class WorkoutViewModel : ViewModel() {
     val postWorkoutListAdapter: WorkoutListAdapter = WorkoutListAdapter(postWorkoutList)
 
     init {
+
         firebaseRepo.getPostWorkoutList().addOnCompleteListener {
             if (it.isSuccessful){
                 postWorkoutList = it.result!!.toObjects(Workout::class.java)
                 postWorkoutListAdapter.postWorkoutListItems = postWorkoutList
                 postWorkoutListAdapter.notifyDataSetChanged()
-            } else {
-                Log.d(TAG, "Error: ${it.exception!!.message}")
-            }
+            } else Log.d(TAG, "Error: ${it.exception!!.message}")
         }
 
     }

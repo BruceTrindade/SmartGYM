@@ -18,7 +18,6 @@ class ExerciseRegisterViewModel : ViewModel() {
 
     fun addExercises(name: String,
                      description: String) {
-
         val exercise = Exercises(name, description)
         firebaseRepo.insert(exercise)
             .addOnSuccessListener {
@@ -27,7 +26,6 @@ class ExerciseRegisterViewModel : ViewModel() {
             .addOnFailureListener {
                 pvMsg.value = it.message
             }
-
     }
-    // TODO: Implement the ViewModel
+
 }

@@ -1,7 +1,7 @@
-package com.example.smartgym
+package com.example.smartgym.viewModel
 
 import androidx.lifecycle.ViewModel
 
 class LoginViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
 }

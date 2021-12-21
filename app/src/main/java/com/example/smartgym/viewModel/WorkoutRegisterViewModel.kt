@@ -18,8 +18,8 @@ class WorkoutRegisterViewModel : ViewModel() {
 
     fun addWorkout(name: String,
                      description: String) {
-
         val workout = Workout(name, description)
+
         firebaseRepo.insertWorkout(workout)
             .addOnSuccessListener {
                 pvStatus.value = true

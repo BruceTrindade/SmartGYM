@@ -41,19 +41,15 @@ class ExerciseFragment : Fragment() {
 
         view.findViewById<FloatingActionButton>(R.id.buttonRegister).setOnClickListener{
             startRegister()
-//            findNavController().navigate(R.id.exerciseRegisterFragment)
         }
 
-
         return view
-
     }
 
     private fun startMain(){
         val i = Intent(context, MainActivity::class.java)
         startActivity(i)
     }
-
 
     private fun startRegister(){
         val transaction = activity?.supportFragmentManager?.beginTransaction()
@@ -70,8 +66,6 @@ class ExerciseFragment : Fragment() {
         transaction?.commit()
         recylerViewList.visibility = View.GONE
         buttonRegister.visibility = View.GONE
-
     }
-
 
 }

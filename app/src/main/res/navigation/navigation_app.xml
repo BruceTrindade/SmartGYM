@@ -28,7 +28,7 @@
         tools:layout="@layout/workout_register_fragment" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.smartgym.LoginFragment"
+        android:name="com.example.smartgym.view.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" />
 </navigation>

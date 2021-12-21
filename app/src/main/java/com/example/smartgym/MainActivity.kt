@@ -1,14 +1,12 @@
 package com.example.smartgym
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import com.example.smartgym.repository.FirebaseRepo
 import com.example.smartgym.view.ExerciseFragment
+import com.example.smartgym.view.LoginFragment
 import com.example.smartgym.view.WorkoutFragment
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

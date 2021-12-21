@@ -15,10 +15,6 @@ import kotlinx.android.synthetic.main.exercise_register_fragment.*
 
 class ExerciseRegisterFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ExerciseRegisterFragment()
-    }
-
     private lateinit var viewModel: ExerciseRegisterViewModel
 
     override fun onCreateView(
@@ -40,10 +36,8 @@ class ExerciseRegisterFragment : Fragment() {
 
         viewModel.status.observe(viewLifecycleOwner, {
             if (it)
-         //   findNavController().popBackStack()
                 startExercise()
         })
-
         return view
     }
 
@@ -63,9 +57,6 @@ class ExerciseRegisterFragment : Fragment() {
         buttonExercises.setOnClickListener {
             startExercise()
         }
-
-
-
     }
 
     private fun startExercise(){
@@ -88,6 +79,5 @@ class ExerciseRegisterFragment : Fragment() {
         textName.visibility = View.GONE
         buttonAdd.visibility = View.GONE
     }
-
 
 }
