@@ -1,10 +1,12 @@
-package com.example.smartgym
+package com.example.smartgym.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.smartgym.repository.Exercises
+import com.example.smartgym.R
 
 class ExercisesListAdapter(var postListItems: List<Exercises>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class DescViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){

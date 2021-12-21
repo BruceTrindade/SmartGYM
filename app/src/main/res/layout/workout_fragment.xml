@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/exerciseFragment"
-    tools:context=".view.ExerciseFragment">
+    android:id="@+id/workoutFragment"
+    tools:context=".WorkoutFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recylerViewList"
+        android:id="@+id/recylerViewWorkoutList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="32dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutWorkout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@drawable/row_exercise_background"
@@ -30,7 +30,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
-            android:id="@+id/buttonHome"
+            android:id="@+id/buttonHomeWorkout"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
@@ -39,7 +39,7 @@
             android:text="Exercícios" />
 
         <ImageButton
-            android:id="@+id/buttonWorkout"
+            android:id="@+id/buttonWorkoutWorkout"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
@@ -47,7 +47,7 @@
             android:text="Treinos" />
 
         <ImageButton
-            android:id="@+id/buttonExercises"
+            android:id="@+id/buttonExercisesWorkout"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
@@ -59,7 +59,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonRegisterWorkout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -68,7 +68,7 @@
         android:contentDescription="TODO"
         android:focusable="true"
         android:src="@android:drawable/ic_input_add"
-        app:layout_constraintEnd_toEndOf="@+id/recylerViewList"
+        app:layout_constraintEnd_toEndOf="@+id/recylerViewWorkoutList"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 

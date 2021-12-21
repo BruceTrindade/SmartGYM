@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workoutRegisterFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/exerciseRegisterFragment"
-    tools:context=".view.ExerciseRegisterFragment">
+    tools:context=".WorkoutRegisterFragment">
 
     <EditText
-        android:id="@+id/textDescription"
+        android:id="@+id/textDescriptionWorkotRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -17,10 +17,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textName" />
+        app:layout_constraintTop_toBottomOf="@+id/textNameWorkoutRegister" />
 
     <EditText
-        android:id="@+id/textName"
+        android:id="@+id/textNameWorkoutRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -32,12 +32,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/buttonAddWorkout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Adicionar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/textDescriptionWorkotRegister" />
 </androidx.constraintlayout.widget.ConstraintLayout>

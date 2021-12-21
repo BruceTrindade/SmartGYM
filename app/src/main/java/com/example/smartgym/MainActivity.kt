@@ -6,17 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.smartgym.R
+import com.example.smartgym.adapter.ExercisesListAdapter
+import com.example.smartgym.repository.Exercises
+import com.example.smartgym.repository.FirebaseRepo
+import com.example.smartgym.view.ExerciseFragment
 import kotlinx.android.synthetic.main.activity_main.*
-
-private const val TAG: String = "HOMEPAGE_LOG"
 
 class MainActivity : AppCompatActivity() {
 
     private val firebaseRepo: FirebaseRepo = FirebaseRepo()
 
     private var postList: List<Exercises> = ArrayList()
-    private val postListAdapter: ExercisesListAdapter = ExercisesListAdapter(postList)
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,9 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful){
                     buttonExercises.setOnClickListener{
                         callExerciseFragment()
-                        bottomBar.visibility = View.GONE
+                    }
+                    buttonWorkout.setOnClickListener{
+                        callWorkoutFragment()
                     }
                     buttonHome.setOnClickListener {
                         startMain()
@@ -39,6 +42,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             buttonExercises.setOnClickListener{
                 callExerciseFragment()
+            }
+            buttonWorkout.setOnClickListener{
+                callWorkoutFragment()
             }
         }
 
@@ -55,8 +61,13 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.layoutMain, ExerciseFragment())
             .commit()
-//        buttonExercises.visibility = View.GONE
-//        buttonWorkout.visibility = View.GONE
+
+    }
+    private fun callWorkoutFragment(){
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.layoutMain, WorkoutFragment())
+            .commit()
 
     }
 }

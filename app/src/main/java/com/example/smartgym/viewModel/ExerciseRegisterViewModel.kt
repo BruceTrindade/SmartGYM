@@ -1,9 +1,10 @@
-package com.example.smartgym
+package com.example.smartgym.viewModel
 
-import android.provider.SyncStateContract.Helpers.insert
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.smartgym.repository.Exercises
+import com.example.smartgym.repository.FirebaseRepo
 
 class ExerciseRegisterViewModel : ViewModel() {
 

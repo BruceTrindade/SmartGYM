@@ -7,14 +7,23 @@
 
     <fragment
         android:id="@+id/exerciseFragment"
-        android:name="com.example.smartgym.ExerciseFragment"
+        android:name="com.example.smartgym.view.ExerciseFragment"
         android:label="exercise_fragment"
         tools:layout="@layout/exercise_fragment" />
 
-
     <fragment
         android:id="@+id/exerciseRegisterFragment"
-        android:name="com.example.smartgym.ExerciseRegisterFragment"
+        android:name="com.example.smartgym.view.ExerciseRegisterFragment"
         android:label="exercise_register_fragment"
         tools:layout="@layout/exercise_register_fragment" />
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.example.smartgym.WorkoutFragment"
+        android:label="workout_fragment"
+        tools:layout="@layout/workout_fragment" />
+    <fragment
+        android:id="@+id/workoutRegisterFragment"
+        android:name="com.example.smartgym.WorkoutRegisterFragment"
+        android:label="workout_register_fragment"
+        tools:layout="@layout/workout_register_fragment" />
 </navigation>

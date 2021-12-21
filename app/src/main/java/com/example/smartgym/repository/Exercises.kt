@@ -1,4 +1,4 @@
-package com.example.smartgym
+package com.example.smartgym.repository
 
 import com.google.firebase.firestore.DocumentId
 
