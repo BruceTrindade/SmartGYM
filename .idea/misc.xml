@@ -13,9 +13,10 @@
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.2953125" />
         <entry key="app/src/main/res/layout/phrases_home.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/row_exercise_background.xml" value="0.23777173913043478" />
-        <entry key="app/src/main/res/layout/workout_fragment.xml" value="0.1358695652173913" />
-        <entry key="app/src/main/res/layout/workout_layout_row.xml" value="0.1358695652173913" />
+        <entry key="app/src/main/res/layout/workout_fragment.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/workout_layout_row.xml" value="0.335" />
         <entry key="app/src/main/res/layout/workout_register_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/menu_item.xml" value="0.335" />
       </map>
     </option>
   </component>

@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.smartgym.R
 import com.example.smartgym.repository.Workout
 
-
 class WorkoutListAdapter(var postWorkoutListItems: List<Workout>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class DescViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(workout: Workout){
